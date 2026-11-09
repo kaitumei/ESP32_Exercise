@@ -1,0 +1,55 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.extensionActivationMode": "always",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "idf.port": "COM8",
+    "idf.currentSetup": "E:\\Study\\ESP\\Frameworks\\v6.1\\esp-idf",
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32s3"
+    },
+
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "cmake.automaticReconfigure": false,
+    "cmake.autoSelectActiveFolder": false,
+    "cmake.options.advanced": {
+        "build": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "hidden"
+        },
+        "launch": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "hidden"
+        },
+        "debug": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "hidden"
+        }
+    },
+
+    // ===== 编辑器美化 & 缩进（ESP-IDF 推荐风格）=====
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.renderControlCharacters": true,
+    "editor.rulers": [80, 120],
+    "editor.wordWrap": "off",
+
+    // ===== 字体大小、滚动、自动保存 =====
+    "editor.fontSize": 17,
+    "editor.fontFamily": "Consolas, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.mouseWheelZoom": true,
+    "files.autoSave": "onFocusChange",
+
+    // ===== VSCode 更新 =====
+    "update.mode": "manual",
+
+    // ===== C/C++ 辅助，适合嵌入式 =====
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, IndentWidth: 4 }",
+    "editor.formatOnSave": false,
+    "idf.flashType": "UART"
+}
