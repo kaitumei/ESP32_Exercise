@@ -1,3 +1,4 @@
+/* 控制RED灯亮灭逻辑，包括亮灭逻辑，翻转逻辑。  */
 #ifndef __LED_H__
 #define __LED_H__
 
