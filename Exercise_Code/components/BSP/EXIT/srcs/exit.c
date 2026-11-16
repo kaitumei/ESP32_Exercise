@@ -1,19 +1,25 @@
 #include "exit.h"
 
 static const char *TAG = "ESP_EXIT";
-// 定义一个队列用于处理按键中断
-static QueueHandle_t exito_queue = NULL;
+static QueueHandle_t exito_queue = NULL;    /* 定义一个队列用于处理按键中断 */
 
 
-// 中断服务函数
+/***********************************************************
+ * @brief 中断服务函数
+ * @param  无
+ * @retval 无
+ **********************************************************/
 void IRAM_ATTR exito_isr_handler(void *arg)
 {
     uint32_t gpio_num = (uint32_t)arg;
     // 发送事件到队列
     xQueueSendFromISR(exito_queue,&gpio_num,NULL);
 }
-
-// 按键处理
+/***********************************************************
+ * @brief 按键任务
+ * @param 无
+ * @retval 无
+ **********************************************************/
 void buntton_task(void *arg)
 {
     uint32_t gpio_num;
@@ -33,7 +39,11 @@ void buntton_task(void *arg)
     }
 
 }
-
+/***********************************************************
+ * @brief 终端初始化
+ * @param 无
+ * @retval 无
+ **********************************************************/
 void exit_init(void)
 {
     gpio_config_t gpio_conf = {

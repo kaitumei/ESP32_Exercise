@@ -1,6 +1,11 @@
 /* key相关代码 */
 #include "key.h"
 
+/*********************************************************
+ * @brief 按键初始化
+ * @param 无
+ * @retval 无
+ **********************************************************/
 void key_init(void)
 {
     gpio_config_t gpio_init_conf = {
@@ -13,6 +18,11 @@ void key_init(void)
     gpio_config(&gpio_init_conf);
 }
 
+/*********************************************************
+ * @brief 按键扫描
+ * @param mode 0: 单次按下 1：连续按下
+ * @retval key_val 按键状态值
+ **********************************************************/
 uint8_t key_scan(uint8_t mode)
 {
     static uint8_t key_state = 1;  // 按键松开标志
